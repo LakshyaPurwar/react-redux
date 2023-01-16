@@ -13,31 +13,15 @@
 
 
 // import {createStore} from 'redux';
-import {configureStore, createSlice} from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
+import counterReducer from './counter';
+import authReducer from './auth';
 
-const initialState = {counter : 0 , visible : true};
-const counterSlice = createSlice({
-    name : 'counter',
-    initialState : initialState,
-    reducers: {
-        increment(state){
-            state.counter++;
-            // Immer used internally to let you write simpler immutable update logic in a mutable syntax
-        },
-        decrement(state)
-        {
-            state.counter--;
-        },
-        increase( state , action){
 
-            state.counter = state.counter + action.payload;
 
-        },
-        toggleCounter(state){
-            state.visible = !state.visible;
-        }
-    } 
-})
+
+
+
 
 // const counterReducer = (prevState , action)=>{
 
@@ -70,14 +54,14 @@ const counterSlice = createSlice({
 // }
 // const store = createStore(counterReducer);
 const store = configureStore({
-    reducer : counterSlice.reducer
+    reducer : {counter : counterReducer , auth : authReducer}
 });
 
 // const counterSubscriber = ()=>{
 //     const latestState = store.getState();
 //     console.log(latestState);
 // }
-export const counterActions = counterSlice.actions;
+
 export default store;
 // store.subscribe(counterSubscriber);
 // store.dispatch({type:  'INCREMENT'});

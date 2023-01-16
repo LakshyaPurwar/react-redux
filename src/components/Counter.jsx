@@ -1,6 +1,6 @@
 import classes from './Counter.module.css';
 import {useSelector , useDispatch} from 'react-redux';
-import { counterActions } from '../store';
+import { counterActions } from '../store/counter';
 
 
 const Counter = () => {
@@ -15,8 +15,8 @@ const Counter = () => {
   //state changes and will get re-evaluated accordingly
   //Amazing , just like a normal state variable
 
-  const counter = useSelector((state)=>{return state.counter});
-  const visible = useSelector((state)=>{return state.visible});
+  const counter = useSelector((state)=>{return state.counter.counter});
+  const visible = useSelector((state)=>{return state.counter.visible});
   const dispatch = useDispatch();
   const incrementHandler = ()=>{
     dispatch(counterActions.increment());
