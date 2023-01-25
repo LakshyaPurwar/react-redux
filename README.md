@@ -7,3 +7,6 @@ All about managing app-wide state using redux-toolkit
 
 ![codeLocation](https://user-images.githubusercontent.com/78524327/214523878-dfc477e2-8f25-438f-997d-716e76d29734.png)
 
+![image](https://user-images.githubusercontent.com/78524327/214587757-8a2a5097-9294-40d5-b18f-c23cf06474fa.png)
+
+
