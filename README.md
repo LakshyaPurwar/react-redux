@@ -1,5 +1,10 @@
 # react-redux
 All about managing app-wide state using redux-toolkit
+````
+```
+Look! You can see my backticks.
+```
+````
 
 ![redux](https://user-images.githubusercontent.com/78524327/214512272-d7e1c35f-a4c5-4d7f-aa5e-5c8eb4e65617.png)
 
